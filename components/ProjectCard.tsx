@@ -14,7 +14,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const image = require(`../public/icons/${icon}`);
   return (
-    <a href={url.trim()} target="_blank" rel="noreferrer" className="entry">
+    <a href={url} target="_blank" rel="noreferrer" className="entry">
       <span className="entry-main">
         <Image alt="" src={image} width="28" height="28" className="flex-none" />
         <span className="entry-text">

@@ -52,7 +52,7 @@ export default function Blog(props: {
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>
-        <AppLayout showSearch={false}>
+        <AppLayout>
           <section className="section">
             <div className="section-heading">
               <h1>Posts</h1>

@@ -75,7 +75,7 @@ export default function Post(props: {
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>
-        <AppLayout showSearch={false}>
+        <AppLayout>
           <article className="section">
             <Link href="/posts" className="secondary hover:text-[var(--primary)]">
               ← Posts

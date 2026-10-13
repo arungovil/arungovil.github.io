@@ -12,7 +12,7 @@ export default function Projects() {
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>
-        <AppLayout showSearch={false}>
+        <AppLayout>
           <section className="section">
             <div className="section-heading">
               <h1>Projects</h1>

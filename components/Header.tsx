@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export const technology = [
+const technology = [
   { title: "About", path: "/" },
   { title: "Work", path: "/work" },
   { title: "Projects", path: "/projects" },
