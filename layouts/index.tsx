@@ -1,18 +1,27 @@
 import Head from "next/head";
 import React from "react";
-import { Header, Footer } from "../components";
+import { Header } from "../components";
 
 interface AppLayoutProps {
   children: any;
-  showSearch: boolean;
+  showSearch?: boolean;
 }
 
-export default function AppLayout({ children, showSearch }: AppLayoutProps) {
+export default function AppLayout({ children }: AppLayoutProps) {
   return (
-    <div className="w-full flex flex-col items-center">
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Arun Govil" />
+      </Head>
+      <a href="#main" className="sr-only-link">
+        Skip to content
+      </a>
+      <div id="main" className="page-column">
+        {children}
+      </div>
       <Header />
-      {children}
-      <Footer />
-    </div>
+    </>
   );
 }

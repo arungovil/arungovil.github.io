@@ -5,6 +5,12 @@ import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 
+// dates are written dd-mm-yyyy
+const toTime = (d: string) => {
+  const [dd, mm, yyyy] = d.split("-").map(Number);
+  return new Date(yyyy, mm - 1, dd).getTime();
+};
+
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join("posts"));
   const posts = files
@@ -21,11 +27,7 @@ export async function getStaticProps() {
         frontMatter,
       };
     })
-    .sort(
-      (a, b) =>
-        new Date(b.frontMatter.date).getTime() -
-        new Date(a.frontMatter.date).getTime()
-    );
+    .sort((a, b) => toTime(b.frontMatter.date) - toTime(a.frontMatter.date));
 
   return {
     props: {
@@ -46,27 +48,30 @@ export default function Blog(props: {
     <div>
       <Head>
         <title>Arun Govil / Posts</title>
-        <meta name="description" content="jack of all commands" />
+        <meta name="description" content="Arun Govil — posts" />
         <link rel="icon" href="/img/frame.png" />
       </Head>
-      <main className="flex flex-col items-center">
+      <main>
         <AppLayout showSearch={false}>
-          <div className="flex min-h-[65vh] flex-col justify-start p-4 w-full max-w-2xl mt-12">
-            <p className="text-2xl text-white">Posts</p>
-            <div className="mt-4 grid grid-cols-1 gap-4">
+          <section className="section">
+            <div className="section-heading">
+              <h1>Posts</h1>
+            </div>
+            <div className="entry-list">
               {props.posts.map(
-                ({ slug, frontMatter: { title, description, thumbnail } }) => (
+                ({ slug, frontMatter: { title, description, thumbnail, date } }) => (
                   <PostCard
                     key={slug}
                     title={title}
                     description={description}
                     url={slug}
                     icon={thumbnail}
+                    date={date}
                   />
                 )
               )}
             </div>
-          </div>
+          </section>
         </AppLayout>
       </main>
     </div>

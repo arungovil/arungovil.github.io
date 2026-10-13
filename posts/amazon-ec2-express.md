@@ -4,7 +4,7 @@ date: "22-12-2022"
 description: "The posts explains steps to set up an Express app on Amazon EC2"
 topic: "Amazon EC2"
 thumbnail: "aws"
-cover: "https://images.pexels.com/photos/833192/pexels-photo-833192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+cover: "/img/posts/amazon-ec2-express.jpg"
 ---
 
 Setting up your Express app on Amazon EC2 is not as hard as you may think. Here, in this article I will explain each step involved in the process which you can follow along. Before getting started, make sure you have the following requirements ready.
@@ -78,7 +78,7 @@ sudo npm install -g pm2
 14. At this stage, nodejs is ready to run, now you can start initializing our first server using Express. You can clone one of your express app to continue. Here, I'm cloning a sample Express app available in my github.
 
 ```
-git clone https://github.com/ArunGovil/ExpressLibrary.git
+git clone https://github.com/arungovil/ExpressLibrary.git
 cd ExpressLibrary; yarn install
 yarn dev
 ```

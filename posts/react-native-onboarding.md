@@ -4,7 +4,7 @@ date: "21-12-2022"
 description: "The tutorial helps you setup an onboarding screen in one minute"
 topic: "React Native"
 thumbnail: "reactjs"
-cover: "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg"
+cover: "/img/posts/react-native-onboarding.jpg"
 ---
 
 I have been thinking about writing down my learning for a very long time now. Although I have wrote freelance articles in the past, the delay was real. Nonetheless, today I'm introducing you to one on my react native packages which I recently released, i.e [React Native Flatboard](https://www.npmjs.com/package/react-native-flatboard).
@@ -69,4 +69,4 @@ const data = [
 ];
 ```
 
-For further customizations, Flatboard also provides a number or optional props which you can play with. Finally for complete documentation, contributions or issues, you can visit the source on my [github](https://github.com/ArunGovil/react-native-flatboard).
+For further customizations, Flatboard also provides a number or optional props which you can play with. Finally for complete documentation, contributions or issues, you can visit the source on my [github](https://github.com/arungovil/react-native-flatboard).

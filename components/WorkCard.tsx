@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import type { Role } from "../content/Work";
 
 interface WorkCardProps {
   title: string;
@@ -8,6 +9,8 @@ interface WorkCardProps {
   logo: string;
   year: string;
   experience: Array<string>;
+  roles?: Role[];
+  defaultExpanded?: boolean;
 }
 export default function WorkCard({
   title,
@@ -16,62 +19,55 @@ export default function WorkCard({
   logo,
   year,
   experience,
+  roles,
+  defaultExpanded = false,
 }: WorkCardProps) {
-  const [isExpanded, setExpanded] = useState(false);
+  const [isExpanded, setExpanded] = useState(defaultExpanded);
   const image = require(`../public/work/${logo}.jpeg`);
 
-  const handleExpand = (event: any) => {
-    setExpanded(!isExpanded);
-  };
-
-  const handleNavigation = (event: any) => {
-    event.stopPropagation();
-  };
   return (
-    <div onClick={handleExpand} className="cursor-pointer">
-      <div className="flex flex-col hover:bg-slate-800 hover:bg-opacity-40">
-        <div className="relative rounded-md h-24 flex p-2 items-center">
-          <Image
-            alt="icon"
-            src={image}
-            width="42"
-            className="ml-2 rounded-md"
-          />
-          <div className="pl-4 w-full">
-            <div className="flex justify-between items-center gap-4 w-full pr-2">
-              <p className="text-md max-w-[60vw] sm:max-w-[70vw] truncate">
-                {role}
-              </p>
-              <a
-                href={url}
-                target="blank"
-                onClick={handleNavigation}
-                className="bg-grey-400 w-12 bg-slate-800 flex items-center justify-center rounded-xl text-blue-500 hover:text-blue-400 text-xs"
-              >
-                Link
-              </a>
-            </div>
-            <div className="flex justify-between items-center gap-4 w-full pr-2">
-              <p className="text-gray-400 max-w-[40vw] sm:max-w-[50vw] truncate">
-                {title}
-              </p>
-              <p className="text-gray-400 truncate text-sm">{year}</p>
-            </div>
-          </div>
-        </div>
+    <div>
+      {/* button, not a clickable div, so keyboard and screen readers can expand it */}
+      <button
+        type="button"
+        aria-expanded={isExpanded}
+        onClick={() => setExpanded(!isExpanded)}
+        className="entry"
+      >
+        <span className="entry-main">
+          <Image alt="" src={image} width="28" height="28" className="rounded-md flex-none" />
+          <span className="entry-text">
+            <span className="title block" style={{ color: "var(--primary)" }}>{role}</span>
+            <span className="secondary block">{title}</span>
+          </span>
+        </span>
+        <span className="dates secondary">{year}</span>
+      </button>
 
-        {isExpanded && (
-          <div className="relative rounded-md h-auto flex items-center px-4 mb-4 text-sm text-slate-400">
-            <ul>
-              {experience.map((item) => (
-                <li key={item} className={experience.length > 1 ? "pb-1" : ""}>
-                  {experience.length > 1 ? "-" : ""} <span> </span> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
+      {isExpanded && (
+        <div className="bullets" style={{ gap: roles ? 20 : undefined }}>
+          {roles
+            ? roles.map((r) => (
+                <div key={r.role} className="flex flex-col gap-2">
+                  <p style={{ color: "var(--primary)" }}>
+                    {r.role} <span className="secondary">· {r.year}</span>
+                  </p>
+                  {r.experience.map((item) => (
+                    <p key={item}>{item}</p>
+                  ))}
+                </div>
+              ))
+            : experience.map((item) => <p key={item}>{item}</p>)}
+          <a
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            className="secondary underline underline-offset-4 w-fit"
+          >
+            Visit {title} ↗
+          </a>
+        </div>
+      )}
     </div>
   );
 }
