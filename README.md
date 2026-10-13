@@ -2,7 +2,7 @@
 My personal NextJS webspace with Markdown blog
 </p>
 <h4 align="center">
-<a href="https://arungovil.me/">https://arungovil.me</a>
+<a href="https://arungovil.github.io/">https://arungovil.github.io</a>
 </h4>
 
 ---
@@ -32,6 +32,6 @@ yarn dev
 Pushes to `main` build and publish the site to GitHub Pages through
 `.github/workflows/deploy.yml`.
 
+- The repo is named `arungovil.github.io`, so the site is served from the root URL.
 - In the repo, set Settings > Pages > Source to **GitHub Actions**.
-- The custom domain lives in `public/CNAME`. Point the domain's DNS at GitHub Pages.
 - To build the static site locally, run `yarn export` (output goes to `out/`).
