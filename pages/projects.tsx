@@ -8,14 +8,16 @@ export default function Projects() {
     <div>
       <Head>
         <title>Arun Govil / Projects</title>
-        <meta name="description" content="jack of all commands" />
+        <meta name="description" content="Arun Govil — projects" />
         <link rel="icon" href="/img/frame.png" />
       </Head>
-      <main className="flex flex-col items-center">
+      <main>
         <AppLayout showSearch={false}>
-          <div className="flex flex-col justify-center p-4 w-full max-w-2xl min-h-[70vh] mt-12">
-            <p className="text-2xl text-white">Projects</p>
-            <div className="mt-4 grid grid-cols-1 gap-4">
+          <section className="section">
+            <div className="section-heading">
+              <h1>Projects</h1>
+            </div>
+            <div className="entry-list">
               {ProjectsData.map((item) => {
                 return (
                   <ProjectCard
@@ -28,7 +30,7 @@ export default function Projects() {
                 );
               })}
             </div>
-          </div>
+          </section>
         </AppLayout>
       </main>
     </div>

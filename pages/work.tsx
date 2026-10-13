@@ -8,15 +8,17 @@ export default function Work() {
     <div>
       <Head>
         <title>Arun Govil / Work</title>
-        <meta name="description" content="jack of all commands" />
+        <meta name="description" content="Arun Govil — work" />
         <link rel="icon" href="/img/frame.png" />
       </Head>
-      <main className="flex flex-col items-center">
+      <main>
         <AppLayout showSearch={false}>
-          <div className="flex flex-col p-4 w-full max-w-2xl min-h-[70vh] mt-12">
-            <p className="text-2xl text-white">Work</p>
-            <div className="mt-4 grid grid-cols-1 gap-4">
-              {WorkExperience.map((item) => {
+          <section className="section">
+            <div className="section-heading">
+              <h1>Work</h1>
+            </div>
+            <div className="entry-list">
+              {WorkExperience.map((item, i) => {
                 return (
                   <WorkCard
                     key={item.title}
@@ -26,11 +28,13 @@ export default function Work() {
                     logo={item.logo}
                     year={item.year}
                     experience={item.experience}
+                    roles={item.roles}
+                    defaultExpanded={i === 0}
                   />
                 );
               })}
             </div>
-          </div>
+          </section>
         </AppLayout>
       </main>
     </div>

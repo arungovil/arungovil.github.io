@@ -7,10 +7,10 @@ export default function App() {
     <div>
       <Head>
         <title>Arun Govil</title>
-        <meta name="description" content="Hobbyist developer" />
+        <meta name="description" content="Arun Govil — lead frontend engineer building web and mobile apps with React, React Native and Vue." />
         <link rel="icon" href="/img/frame.png" />
       </Head>
-      <main className="flex flex-col items-center">
+      <main>
         <AppLayout showSearch={false}>
           <About />
         </AppLayout>

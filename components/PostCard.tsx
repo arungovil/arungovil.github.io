@@ -1,32 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface ProjectCardProps {
+interface PostCardProps {
   title: string;
   description: string;
   url: string;
   icon: string;
+  date?: string;
 }
-export default function ProjectCard({
+export default function PostCard({
   title,
   description,
   url,
   icon,
-}: ProjectCardProps) {
+  date,
+}: PostCardProps) {
   const image = require(`../public/icons/${icon}.svg`);
   return (
-    <Link href={`/posts/${url}`}>
-      <div className="rounded-md h-24 flex p-2 items-center hover:bg-slate-800 hover:bg-opacity-40">
-        <Image alt="icon" src={image} width="42" className="ml-2" />
-        <div className="pl-4">
-          <p className="text-md max-w-[60vw] sm:max-w-[70vw] truncate">
-            {title}
-          </p>
-          <p className="text-gray-400 max-w-[60vw] sm:max-w-[70vw] truncate">
-            {description}
-          </p>
-        </div>
-      </div>
+    <Link href={`/posts/${url}`} className="entry">
+      <span className="entry-main">
+        <Image alt="" src={image} width="28" height="28" className="flex-none" />
+        <span className="entry-text">
+          <span className="title block" style={{ color: "var(--primary)" }}>{title}</span>
+          <span className="secondary block">{description}</span>
+        </span>
+      </span>
+      {date && <span className="dates secondary">{date}</span>}
     </Link>
   );
 }
