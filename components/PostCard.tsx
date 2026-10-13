@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { formatDate } from "../utils";
 
 interface PostCardProps {
   title: string;
@@ -25,7 +26,7 @@ export default function PostCard({
           <span className="secondary block">{description}</span>
         </span>
       </span>
-      {date && <span className="dates secondary">{date}</span>}
+      {date && <span className="dates secondary">{formatDate(date)}</span>}
     </Link>
   );
 }

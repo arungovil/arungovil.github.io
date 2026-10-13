@@ -1,15 +1,10 @@
 import Head from "next/head";
 import { PostCard } from "../../components";
 import AppLayout from "../../layouts";
+import { toTime } from "../../utils";
 import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
-
-// dates are written dd-mm-yyyy
-const toTime = (d: string) => {
-  const [dd, mm, yyyy] = d.split("-").map(Number);
-  return new Date(yyyy, mm - 1, dd).getTime();
-};
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join("posts"));

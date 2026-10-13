@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import AppLayout from "../../layouts";
+import { formatDate } from "../../utils";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -87,7 +88,7 @@ export default function Post(props: {
                 {props.frontMatter.title}
               </h1>
               <p className="secondary mt-1">
-                {props.frontMatter.date} · {props.frontMatter.topic}
+                {formatDate(props.frontMatter.date)} · {props.frontMatter.topic}
               </p>
             </div>
             {props.frontMatter.cover && (
