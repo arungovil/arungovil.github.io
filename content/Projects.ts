@@ -26,7 +26,7 @@ export const ProjectsData = [
   {
     title: "Personal Website",
     description: "The dead simple website you are currently on",
-    url: "https://arungovil.me",
+    url: "https://arungovil.github.io",
     icon: "nextjs.svg",
   },
   {
