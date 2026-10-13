@@ -91,8 +91,9 @@ export default function About() {
             some of my best work has been what we chose not to build.
           </p>
           <p className="mt-3">
-            Outside of work I cycle, shoot black and white photos, enjoy a beer
-            with old school rock, and battle my existential crisis.
+            Outside of work I play music, cycle, shoot black and white photos,
+            and drink beer to old school rock, all while battling an
+            existential crisis.
           </p>
         </div>
       </section>
