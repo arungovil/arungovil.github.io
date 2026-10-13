@@ -7,7 +7,9 @@ export default function App() {
     <div>
       <Head>
         <title>Arun Govil</title>
-        <meta name="description" content="Arun Govil — lead frontend engineer building web and mobile apps with React, React Native and Vue." />
+        <meta name="description" content="Lead frontend engineer building web and mobile products with React, React Native and TypeScript." />
+        <meta property="og:title" content="Arun Govil · Lead Frontend Engineer" />
+        <meta property="og:description" content="Lead frontend engineer building web and mobile products with React, React Native and TypeScript." />
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>

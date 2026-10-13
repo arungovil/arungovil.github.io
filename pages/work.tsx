@@ -8,7 +8,9 @@ export default function Work() {
     <div>
       <Head>
         <title>Arun Govil / Work</title>
-        <meta name="description" content="Arun Govil — work" />
+        <meta name="description" content="Lead Frontend Engineer at Unifize. Before that, Frontend Developer at Streben Technik." />
+        <meta property="og:title" content="Arun Govil · Work" />
+        <meta property="og:description" content="Lead Frontend Engineer at Unifize. Before that, Frontend Developer at Streben Technik." />
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>

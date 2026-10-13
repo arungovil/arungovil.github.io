@@ -255,6 +255,21 @@ button:focus-visible {
   opacity: 0.85;
 }
 
+@media (max-width: 420px) {
+  .dock-surface {
+    gap: 2px;
+    padding: 3px;
+  }
+  .dock-link {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+  .dock-cta {
+    padding: 0 12px;
+    font-size: 13px;
+  }
+}
+
 /* markdown posts */
 .markdown {
   line-height: 1.7;

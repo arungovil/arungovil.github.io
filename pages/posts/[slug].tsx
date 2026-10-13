@@ -72,6 +72,8 @@ export default function Post(props: {
       <Head>
         <title>Posts / {props.frontMatter.title}</title>
         <meta name="description" content={props.frontMatter.description} />
+        <meta property="og:title" content={props.frontMatter.title} />
+        <meta property="og:description" content={props.frontMatter.description} />
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>
@@ -89,10 +91,12 @@ export default function Post(props: {
               </p>
             </div>
             {props.frontMatter.cover && (
+              // plain img: static export has no image optimizer, so next/image adds nothing
+              // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={props.frontMatter.cover}
                 alt=""
-                className="my-6 w-full h-auto rounded"
+                className="my-6 w-full aspect-video object-cover rounded"
               />
             )}
             <div

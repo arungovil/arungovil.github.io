@@ -1,32 +1,37 @@
 <p align="center">
 My personal NextJS webspace with Markdown blog
 </p>
-<h4 align="center"> 
+<h4 align="center">
 <a href="https://arungovil.me/">https://arungovil.me</a>
- </h4> 
+</h4>
 
 ---
 
-## How to
-
-By [forking](https://github.com/arungovil/arungovil.me/fork) the repo, you can have a similar personal website for yourself within no time. Once forked, you can deploy the repo to any static serving services like [Netlify](https://netlify.com) or [Vercel](https://vercel.com) and your site will be live on the internet.
-
 ## Made with
 
-- NextJS
-- TailwindCSS
-- Markdown
-- Netlify
-
+- Next.js (static export)
+- Tailwind CSS
+- Markdown posts, highlighted at build time with highlight.js
 
 ## Running locally
-
-Once the repo is cloned to your local device, you can run:
 
 ```sh
 yarn install
 yarn dev
-
 ```
 
-App will start running immediately.
+## Content
+
+- Work: `content/Work.ts`
+- Projects: `content/Projects.ts`
+- Posts: Markdown files in `posts/` (put cover images in `public/img/posts/`)
+- About: `components/About.tsx`
+
+## Deploying
+
+Pushes to `main` build and publish the site to GitHub Pages through
+`.github/workflows/deploy.yml`.
+
+- In the repo, set Settings > Pages > Source to **GitHub Actions**.
+- The custom domain lives in `public/CNAME`. Point the domain's DNS at GitHub Pages.
+- To build the static site locally, run `yarn export` (output goes to `out/`).
