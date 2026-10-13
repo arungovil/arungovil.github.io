@@ -48,7 +48,9 @@ export default function Blog(props: {
     <div>
       <Head>
         <title>Arun Govil / Posts</title>
-        <meta name="description" content="Arun Govil — posts" />
+        <meta name="description" content="Short tutorials on React Native, AWS and web development." />
+        <meta property="og:title" content="Arun Govil · Posts" />
+        <meta property="og:description" content="Short tutorials on React Native, AWS and web development." />
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>

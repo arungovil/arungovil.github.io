@@ -8,7 +8,9 @@ export default function Projects() {
     <div>
       <Head>
         <title>Arun Govil / Projects</title>
-        <meta name="description" content="Arun Govil — projects" />
+        <meta name="description" content="Open source packages, tools and side projects by Arun Govil." />
+        <meta property="og:title" content="Arun Govil · Projects" />
+        <meta property="og:description" content="Open source packages, tools and side projects by Arun Govil." />
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>
