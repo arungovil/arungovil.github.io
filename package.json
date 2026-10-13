@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@loadable/component": "^5.15.2",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
@@ -28,7 +27,6 @@
     "typescript": "4.8.4"
   },
   "devDependencies": {
-    "@types/loadable__component": "^5.13.4",
     "@types/marked": "^4.0.8"
   }
 }

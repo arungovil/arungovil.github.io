@@ -4,7 +4,6 @@ import { Header } from "../components";
 
 interface AppLayoutProps {
   children: any;
-  showSearch?: boolean;
 }
 
 export default function AppLayout({ children }: AppLayoutProps) {

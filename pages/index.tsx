@@ -11,7 +11,7 @@ export default function App() {
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main>
-        <AppLayout showSearch={false}>
+        <AppLayout>
           <About />
         </AppLayout>
       </main>
