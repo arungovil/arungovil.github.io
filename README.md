@@ -1,11 +1,6 @@
-<p align="center">
-My personal NextJS webspace with Markdown blog
-</p>
-<h4 align="center">
-<a href="https://arungovil.github.io/">https://arungovil.github.io</a>
-</h4>
+## Preview
 
----
+<img src="docs/preview.png" alt="Preview of arungovil.github.io" />
 
 ## Made with
 
