@@ -1,5 +1,12 @@
 export const ProjectsData = [
   {
+    title: "Helen",
+    description:
+      "macOS menu bar app that shows synced lyrics of what's playing",
+    url: "https://github.com/arungovil/helen#helen",
+    icon: "swift.svg",
+  },
+  {
     title: "Ezer",
     description: "AI companion that lives in your Chrome side panel",
     url: "https://github.com/arungovil/ezer",
