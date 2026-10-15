@@ -80,11 +80,10 @@ export default function About() {
             >
               Unifize
             </a>
-            , a collaborative quality management platform used by manufacturers.
-            I led a team of 5 frontend engineers building its core features,
-            from enterprise workflows and realtime collaboration to no-code
-            builders and nested datatables, and founded the in-house design
-            system.
+            , a collaborative quality management platform for manufacturers. I
+            led a team of 5 frontend engineers building its core features, from
+            enterprise workflows and realtime collaboration to no-code builders
+            and nested datatables, and founded the in-house design system.
           </p>
           <p className="mt-3">
             I&apos;m happiest between product and engineering. I care deeply
