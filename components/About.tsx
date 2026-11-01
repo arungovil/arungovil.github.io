@@ -61,7 +61,7 @@ export default function About() {
         <div className="flex justify-between items-center gap-4 mb-6">
           <div>
             <h1>Arun Govil</h1>
-            <p className="secondary">Lead Frontend Engineer</p>
+            <p className="secondary">Software Engineer</p>
           </div>
           <p className="secondary whitespace-nowrap">
             <span aria-hidden="true">🌏</span> Bengaluru, India

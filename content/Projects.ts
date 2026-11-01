@@ -1,5 +1,11 @@
 export const ProjectsData = [
   {
+    title: "Durable",
+    description: "Pair programming with pi durable",
+    url: "https://github.com/arungovil/durable",
+    icon: "javascript.svg",
+  },
+  {
     title: "Helen",
     description:
       "macOS menu bar app that shows synced lyrics of what's playing",
