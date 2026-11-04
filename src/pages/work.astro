@@ -1,0 +1,33 @@
+---
+import Base from "../layouts/Base.astro";
+import { WorkExperience } from "../data/work.js";
+---
+<Base title="Work · Arun Govil" description="Lead Frontend Engineer at Unifize. Before that, Frontend Developer at Streben Technik.">
+  <h1>Work</h1>
+  {WorkExperience.map((w) => (
+    <section>
+      <h2><a href={w.url}>{w.title}</a> <small>{w.year}</small></h2>
+      {w.roles ? w.roles.map((r) => (
+        <>
+          <h3>{r.role} <small>{r.year}</small></h3>
+          <ul>{r.experience.map((e) => <li>{e}</li>)}</ul>
+        </>
+      )) : (
+        <>
+          <p>{w.role}</p>
+          <ul>{w.experience.map((e) => <li>{e}</li>)}</ul>
+        </>
+      )}
+    </section>
+  ))}
+</Base>
+<style>
+  h2,
+  h3 {
+    font-size: 1em;
+  }
+  h3 {
+    font-weight: normal;
+    font-style: italic;
+  }
+</style>

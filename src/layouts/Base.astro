@@ -1,0 +1,40 @@
+---
+import "../styles/global.css";
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const { pathname } = Astro.url;
+const nav = [
+  { label: "About", href: "/" },
+  { label: "Work", href: "/work/" },
+  { label: "Projects", href: "/projects/" },
+  { label: "Posts", href: "/posts/" },
+];
+const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL("/img/og.png", Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/img/frame.png" />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main">
+        {nav.map(({ label, href }) => <a {href} aria-current={isActive(href) ? "page" : undefined}>{label}</a>)}
+      </nav>
+    </header>
+    <main><slot /></main>
+    <script is:inline src="//gc.zgo.at/count.js" data-goatcounter="https://arungovil.goatcounter.com/count" async></script>
+  </body>
+</html>

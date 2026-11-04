@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { formatDate } from "../../lib/format.js";
+const posts = (await getCollection("posts")).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+<Base title="Posts · Arun Govil" description="Short tutorials on React Native, AWS and web development.">
+  <h1>Posts</h1>
+  {posts.map((p) => (
+    <p>
+      <a href={`/posts/${p.id}/`}>{p.data.title}</a><br />
+      {formatDate(p.data.date)} · {p.data.description}
+    </p>
+  ))}
+</Base>

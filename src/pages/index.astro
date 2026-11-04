@@ -1,0 +1,19 @@
+---
+import Base from "../layouts/Base.astro";
+import { links } from "../data/links.js";
+const stack = ["TypeScript", "React", "SQLite", "Go", "Figma", "Design Systems"];
+---
+<Base title="Arun Govil" description="Lead frontend engineer building web and mobile products with React, React Native and TypeScript.">
+  <h1>Arun Govil</h1>
+  <p>Software Engineer · Bengaluru, India</p>
+  <p>I design and build web and mobile interfaces with love for minimalist design and meaningful experience.</p>
+  <p>Most recently I was Lead Frontend Engineer at <a href="https://www.unifize.com">Unifize</a>, a collaborative quality management platform for manufacturers. I led a team of 5 frontend engineers building its core features, from enterprise workflows and realtime collaboration to no-code builders and nested datatables, and founded the in-house design system.</p>
+  <p>I'm happiest between product and engineering. I care deeply about the end user and about simplicity, so I'm not afraid to push back when something isn't right for them.</p>
+  <p>Away from the keyboard, I play <a href="https://music.youtube.com/@aarungovil">music</a>, cycle, shoot black and white photos, and drink beer to old school rock, with the occasional existential crisis on the side.</p>
+  <h2>Tech</h2>
+  <p>{stack.join(", ")}</p>
+  <h2>Elsewhere</h2>
+  <p>
+    {links.map((l, i) => <>{i > 0 && ", "}<a href={l.href}>{l.label}</a></>)}
+  </p>
+</Base>

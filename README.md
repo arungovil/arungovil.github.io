@@ -1,32 +1,14 @@
-## Preview
+# arungovil.github.io
 
-<img src="docs/preview.png" alt="Preview of arungovil.github.io" />
-
-## Made with
-
-- Next.js (static export)
-- Tailwind CSS
-- Markdown posts, highlighted at build time with highlight.js
-
-## Running locally
+Personal site built with [Astro](https://astro.build), pnpm and [Biome](https://biomejs.dev).
 
 ```sh
-yarn install
-yarn dev
+pnpm install
+pnpm dev      # local server
+pnpm build    # static site into dist/
+pnpm check    # lint and format
 ```
 
-## Content
+Posts are Markdown in `src/content/posts/` (frontmatter in `src/content.config.ts`).
 
-- Work: `content/Work.ts`
-- Projects: `content/Projects.ts`
-- Posts: Markdown files in `posts/` (put cover images in `public/img/posts/`)
-- About: `components/About.tsx`
-
-## Deploying
-
-Pushes to `main` build and publish the site to GitHub Pages through
-`.github/workflows/deploy.yml`.
-
-- The repo is named `arungovil.github.io`, so the site is served from the root URL.
-- In the repo, set Settings > Pages > Source to **GitHub Actions**.
-- To build the static site locally, run `yarn export` (output goes to `out/`).
+Pushes to `main` deploy to GitHub Pages through `.github/workflows/deploy.yml`. In the repo, set Settings > Pages > Source to **GitHub Actions**.

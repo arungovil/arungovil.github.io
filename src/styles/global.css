@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light;
+  --link: #b3361b;
+}
+body {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+  font:
+    17px / 1.6 Charter,
+    "Bitstream Charter",
+    "Sitka Text",
+    Cambria,
+    serif;
+}
+a {
+  color: var(--link);
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin-bottom: 2rem;
+}
+nav a[aria-current="page"] {
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+}
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  background: #eff1f5;
+}

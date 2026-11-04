@@ -1,0 +1,13 @@
+---
+import Base from "../layouts/Base.astro";
+import { ProjectsData } from "../data/projects.js";
+---
+<Base title="Projects · Arun Govil" description="Open source packages, tools and side projects by Arun Govil.">
+  <h1>Projects</h1>
+  {ProjectsData.map((p) => (
+    <p>
+      <a href={p.url}>{p.title}</a><br />
+      {p.description}
+    </p>
+  ))}
+</Base>
