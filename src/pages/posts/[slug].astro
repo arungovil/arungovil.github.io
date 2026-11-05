@@ -18,3 +18,13 @@ const { Content } = await render(post);
     <Content />
   </article>
 </Base>
+<style>
+  /* fixed box reserves the space, so text doesn't jump when the cover loads */
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-block: 1.5rem;
+    border-radius: 4px;
+  }
+</style>
