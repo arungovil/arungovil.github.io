@@ -5,7 +5,7 @@ export const WorkExperience = [
     year: "Jun 2023 - Sep 2026",
     roles: [
       {
-        role: "Lead Frontend Engineer",
+        role: "Lead Software Engineer",
         year: "Jul 2024 - Sep 2026",
         experience: [
           "Led the frontend architecture, code reviews and tech debt management for a team of 5 frontend engineers.",

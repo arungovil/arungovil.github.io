@@ -1,22 +1,22 @@
 export const ProjectsData = [
   {
-    title: "Pairable",
+    title: "pairable",
     description: "Pair programming interface with pi durable and celld",
     url: "https://github.com/arungovil/pairable",
   },
   {
-    title: "Helen",
+    title: "helen",
     description:
       "macOS menu bar app that shows synced lyrics of what's playing",
     url: "https://github.com/arungovil/helen#helen",
   },
   {
-    title: "Ezer",
+    title: "ezer",
     description: "AI companion that lives in your Chrome side panel",
     url: "https://github.com/arungovil/ezer",
   },
   {
-    title: "React Native Flatboard",
+    title: "react-native-flatboard",
     description: "Flatlist based onboarding screen for React Native",
     url: "https://github.com/arungovil/react-native-flatboard",
   },
@@ -26,17 +26,17 @@ export const ProjectsData = [
     url: "https://www.npmjs.com/package/@arungovil/sanitize-js",
   },
   {
-    title: "CMDR",
+    title: "cmdr",
     description: "One stop directory for frequently used commands",
     url: "https://cmdr.netlify.app",
   },
   {
-    title: "Personal Website",
+    title: "arungovil.github.io",
     description: "The dead simple website you are currently on",
     url: "https://arungovil.github.io",
   },
   {
-    title: "Multi Step Form",
+    title: "StepForm",
     description: "Multi step React form component using Context API",
     url: "https://github.com/arungovil/StepForm",
   },
@@ -51,7 +51,7 @@ export const ProjectsData = [
     url: "https://arungovil.github.io/BloodHub/",
   },
   {
-    title: "Dawkins Scale",
+    title: "DawkinsScale",
     description: "Dawkins scale of faith visualized on the web",
     url: "https://dawkins.netlify.app",
   },
