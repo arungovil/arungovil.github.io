@@ -1,12 +1,19 @@
 export const WorkExperience = [
   {
+    title: "TeamOhana",
+    role: "Software Engineer",
+    url: "https://teamohana.com/",
+    year: "Nov 2026 - Present",
+    experience: [],
+  },
+  {
     title: "Unifize",
     url: "https://unifize.com/",
-    year: "Jun 2023 - Sep 2026",
+    year: "Jun 2023 - Oct 2026",
     roles: [
       {
         role: "Lead Software Engineer",
-        year: "Jul 2024 - Sep 2026",
+        year: "Jul 2024 - Oct 2026",
         experience: [
           "Led the frontend architecture, code reviews and tech debt management for a team of 5 frontend engineers.",
           "Architected a SQLite and Web Worker flow for processing and caching large table datasets in the browser.",

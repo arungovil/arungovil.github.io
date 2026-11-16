@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import { WorkExperience } from "../data/work.js";
 ---
-<Base title="Work · Arun Govil" description="Lead Software Engineer at Unifize. Before that, Frontend Developer at Streben Technik.">
+<Base title="Work · Arun Govil" description="Software Engineer at TeamOhana. Previously Lead Software Engineer at Unifize.">
   <h1>Work</h1>
   {WorkExperience.map((w) => (
     <section>
@@ -15,7 +15,7 @@ import { WorkExperience } from "../data/work.js";
       )) : (
         <>
           <p>{w.role}</p>
-          <ul>{w.experience.map((e) => <li>{e}</li>)}</ul>
+          {w.experience.length > 0 && <ul>{w.experience.map((e) => <li>{e}</li>)}</ul>}
         </>
       )}
     </section>
